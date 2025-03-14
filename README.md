@@ -1,4 +1,4 @@
-### <h1>ADVANCE FILE SHARING BOT V6 🤖</h1>
+### <h1>ADVANCE FILE SHARING BOT V5 🤖</h1>
 <img src="https://telegra.ph/file/ff8fbe7d67a3c7492c353.jpg">
 <blockquote><b>THIS IS AN ADVANCE FILE SHARING BOT WITH REQUEST FORCE-FSUB, MADE BY ➪ <a href="https://t.me/Urr_Sanjiii">𝐒ᴀɴJɪ</a><br> HERE ONLY THE HIGHLIGHTTED FEATURES ARE MENTIONED BELOW ;</b></blockquote>
 
@@ -33,21 +33,43 @@
 ### 8. DATABASE 💾:
 <i>All the features mentioned above are stored permanently in the database, meaning the data will remain unchanged until you decide to modify it.</i>
 
+### 9. TOKEN VERIFICATION 💸: 
+<i>You can add or remove token verfication system by providing the required details like shortner url/api key/token timer/etc through bot, and you can also remove/turn off token verification if needed.</i>
+
+### 10. LINK BYPASS DETECTION 💀: 
+<i>If a bot user try to bypass the token verification, then the bot will immediately detect it and give a warning to the user and says to verify again. Isn't it Good ? 😂💭</i>
+
 ### <i>🚀 In addition to the above, more user-friendly and advanced interaction features have been added. It is upgraded version of previous bot features, So more interactive then previous.</i>
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
 ### <h2>⚠️ YOU SHOULD ADD BELOW COMMANDS ON YOUR BOT:</h2>
 ```
-start - ⚡️ ᴄʜᴇᴄᴋ ᴀʟɪᴠᴇ/ᴅᴇᴀᴅ !
-help - ⚡️ ɪɴsᴛʀᴜᴄᴛɪᴏɴ ғᴏʀ ᴜsɪɴɢ ʙᴏᴛ
-users - 👀 ᴠɪᴇᴡ ᴜsᴇʀ sᴇᴛᴛɪɴɢ ᴄᴏᴍᴍᴀɴᴅs
-forcesub - 👀 ᴠɪᴇᴡ ғᴏʀᴄᴇsᴜʙ ʀᴇʟᴀᴛᴇᴅ ᴄᴏᴍᴍᴀɴᴅs
-req_fsub - ⚙️ ᴠɪᴇᴡ ʀᴇǫᴜᴇsᴛ ғᴏʀᴄᴇsᴜʙ sᴇᴛᴛɪɴɢs
-files - ⚙️ ᴠɪᴇᴡ ᴍᴇssᴀɢᴇ/ғɪʟᴇs ʀᴇʟᴀᴛᴇᴅ sᴇᴛᴛɪɴɢs
-auto_del - ⚙️ ᴠɪᴇᴡ ᴀᴜᴛᴏ ᴅᴇʟᴇᴛᴇ sᴇᴛᴛɪɴɢs 
-cmd - ⚠️ ᴠɪᴇᴡ ʙᴀsɪᴄ ʙᴏᴛ ᴄᴏᴍᴍᴀɴᴅs (ᴀᴅᴍɪɴs)
-restart - ⚠️ ғᴏʀᴄᴇғᴜʟʟʏ ʀᴇsᴛᴀʀᴛ ᴛʜᴇ ʙᴏᴛ (ᴏᴡɴᴇʀ)
+start - Ah, checking if I'm alive? How thoughtful of you.  
+help - Need a little guidance? Let me show you the way. 
+batch - Generating multiple links at once? Efficient and clever.  
+genlink - A link for a single post? How neat.  
+broadcast - A message for everyone? How bold of you.  
+cancel - Ah, stopping a broadcast? Second thoughts, I see. 
+users - Curious about user commands? Go on, take a look.  
+forcesub - A little rule to ensure everyone stays together.  
+req_fsub - Want to know about the requested force subscription? How diligent. 
+
+files - Ah, organizing messages and files? Such a responsible one.  
+auto_del - Let’s make things vanish, shall we?  
+cmd - A secret list of commands… but only for admins, how exclusive.  
+add_fsub - Adding a forced subscription? Such authority you have.  
+del_fsub - Removing a forced subscription? A change of heart, perhaps?  
+fsub_chnl - Ah, checking the force subscription channels? How meticulous.  
+add_admins - Giving admin privileges? How generous of you.  
+del_admins - Taking away admin status? A rather cold decision.  
+admin_list - Curious about who holds power? Here’s the list.  
+add_banuser - Banning someone? My, how merciless.  
+del_banuser - Undoing a ban? Feeling kind today?  
+banuser_list - A little list of those cast aside. How sad.  
+status - Checking my uptime and users? How very observant.  
+token - Verifying tokens? Always so careful, aren't you?
+restart - Restarting me? Do be gentle.  
 ```
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
