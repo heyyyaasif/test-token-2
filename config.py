@@ -31,7 +31,7 @@ DB_URL = os.environ.get("DB_URL", "mongodb+srv://Cobra:cobra813@cluster0.0lso95o
 DB_NAME = os.environ.get("DATABASE_NAME", "HancockADVTokenBot")
 
 VERIFY_DB = os.environ.get("VERIFY_DB", "mongodb+srv://sanjisama626:sanjisama626@sanjisama.lukxw8r.mongodb.net/?retryWrites=true&w=majority")
-
+DBV_NAME = os.environ.get("VERIFY_DBNAME", "LuffyADVTokenBot")
 
 TOKEN_PIC = os.environ.get("TOKEN_PIC", "https://envs.sh/H2r.jpg")
 
