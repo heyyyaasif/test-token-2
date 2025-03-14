@@ -3,8 +3,13 @@
 <blockquote><b>THIS IS AN ADVANCE FILE SHARING BOT WITH TOKEN VERIFICATION SYSTEM AND LINK BYPASS DETECTION, MADE BY ➪ <br><a href="https://t.me/Urr_Sanjiii">𝐒ᴀɴJɪ 𝐒ᴀᴍᴀ</a> & <a href="https://t.me/metaui">📚 𝐇 𝐀 𝐌 𝐙 𝐀</a><br> HERE ONLY THE HIGHLIGHTED FEATURES ARE MENTIONED BELOW ;</b></blockquote>
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+
+> [!CAUTION]
+> _```Only true warriors honor their sensei. Keep the credits, and stay on the right path! ⚡🏯```_
+
 <details>
 <summary><b><blockquote> BOT'S HIGHLIGHTED FEATURES :</blockquote></b></summary>
+  <img align="" alt="count" src="https://count.getloli.com/get/@:otterai?theme=rule34">
   
 ### <h2> 🌟 BOT FEATURES 1.1: </h2>
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif"><br>
