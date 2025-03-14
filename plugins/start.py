@@ -1,4 +1,4 @@
-# +++ Customised By Rohit [telegram username: @rohit_1888] +++
+# +++ ᴜɪ ʙʏ ᴀʜᴍᴇᴅ [telegram username: @ᴜʀʀ_sᴀɴᴊɪɪɪ] +++
 
 import asyncio
 import base64
@@ -48,7 +48,7 @@ async def start_command(client: Client, message: Message):
     SHORTLINK_API = await db.get_shortener_api()
     TUT_VID = await db.get_tut_video()
     ADMINS = await db.get_all_admins()
-    MIN_VERIFY_TIME = 40  # Minimum time (in seconds) before verification
+    MIN_VERIFY_TIME = 45  # Minimum time (in seconds) before verification
 
     logging.info(f"Received /start command from user ID: {id}")
 
@@ -101,11 +101,11 @@ async def start_command(client: Client, message: Message):
                 logging.warning(f"ᴜsᴇʀ {id} ᴛʀɪᴇᴅ ᴛᴏ ᴠᴇʀɪғʏ ᴛᴏᴏ ᴇᴀʀʟʏ. ʀᴇᴍᴀɪɴɪɴɢ ᴛɪᴍᴇ : {remaining_time} sec")
                 return await message.reply_video(
 			video = "https://envs.sh/ekQ.mp4",
-			caption = "<blockquote><b>🚨 Bʏᴘᴀss Aᴛᴛᴇᴍᴘᴛ Dᴇᴛᴇᴄᴛᴇᴅ! 🚨</blockquote>\n\n» ᴡᴀʀɴɪɴɢ!</b><i> ʏᴏᴜ ᴍᴜsᴛ ʀᴇsᴏʟᴠᴇ ᴛʜᴇ ʟɪɴᴋ ᴛᴏ ᴀᴄᴄᴇss ᴛʜᴇ ғɪʟᴇ. ɴᴏ sʜᴏʀᴛᴄᴜᴛs, ɴᴏ ᴛʀɪᴄᴋs! ᴀɴʏ ᴀᴛᴛᴇᴍᴘᴛ ᴛᴏ ʙʏᴘᴀss ᴛʜᴇ sʏsᴛᴇᴍ ᴡɪʟʟ ᴛʀɪɢɢᴇʀ ᴀɴ ɪɴsᴛᴀɴᴛ ʙᴀɴ! 🚫🔥</i>",
+			caption = "<blockquote><b>🚨 Bʏᴘᴀss Aᴛᴛᴇᴍᴘᴛ Dᴇᴛᴇᴄᴛᴇᴅ! 🚨</blockquote>\n\n» ᴡᴀʀɴɪɴɢ!</b> ʏᴏᴜ ᴍᴜsᴛ ʀᴇsᴏʟᴠᴇ ᴛʜᴇ ʟɪɴᴋ ᴛᴏ ᴀᴄᴄᴇss ᴛʜᴇ ғɪʟᴇ. ɴᴏ sʜᴏʀᴛᴄᴜᴛs, ɴᴏ ᴛʀɪᴄᴋs! ᴀɴʏ ᴀᴛᴛᴇᴍᴘᴛ ᴛᴏ ʙʏᴘᴀss ᴛʜᴇ sʏsᴛᴇᴍ ᴡɪʟʟ ᴛʀɪɢɢᴇʀ ᴀɴ ɪɴsᴛᴀɴᴛ ʙᴀɴ! 🚫🔥",
 		        reply_markup=InlineKeyboardMarkup([
-                    [InlineKeyboardButton("ᴠᴇʀɪғʏ ᴀɢᴀɪɴ", url=f"https://t.me/{client.username}?start=start")],
-                    [InlineKeyboardButton("ᴛᴜᴛᴏʀɪᴀʟ", url=TUT_VID),
-		    InlineKeyboardButton("ᴅᴇᴠʟᴏᴘᴇʀ", url = "https://t.me/urr_sanjiii") ]
+                    [InlineKeyboardButton("• ᴄʟɪᴄᴋ ᴛᴏ ᴠᴇʀɪғʏ ᴀɢᴀɪɴ  •", url=f"https://t.me/{client.username}?start=start")],
+                    [InlineKeyboardButton("• ᴛᴜᴛᴏʀɪᴀʟ ᴠɪᴅᴇᴏ", url=TUT_VID),
+		    InlineKeyboardButton("ᴅᴇᴠʟᴏᴘᴇʀ •", url = "https://t.me/urr_sanjiii") ]
                 ])
 		)
 
@@ -114,7 +114,7 @@ async def start_command(client: Client, message: Message):
             logging.info(f"User {id} successfully verified with token: {token}")
 
             return await message.reply(
-                f"<blockquote>» ᴄᴏɴɢʀᴀᴛᴜʟᴀᴛɪᴏɴs !!,\n»ʏᴏᴜʀ ᴛᴏᴋᴇɴ ʜᴀs ʙᴇᴇɴ sᴜᴄᴄᴇssғᴜʟʟʏ ᴠᴇʀɪғɪᴇᴅ ᴀɴᴅ ɪs ᴠᴀʟɪᴅ ғᴏʀ {get_exp_time(VERIFY_EXPIRE)}\n» ɴᴏᴡ ʏᴏᴜ ɢᴇᴛ ᴀᴄᴄᴇss ᴛᴏ ᴀʟʟ 6 ʙᴏᴛs ᴏғ @anime_raven ғᴏʀ {get_exp_time(VERIFY_EXPIRE)}.</blockquote>",
+                f"<blockquote>» ᴄᴏɴɢʀᴀᴛᴜʟᴀᴛɪᴏɴs !!, 🥳🥳\n\n»ʏᴏᴜʀ ᴛᴏᴋᴇɴ ʜᴀs ʙᴇᴇɴ sᴜᴄᴄᴇssғᴜʟʟʏ ᴠᴇʀɪғɪᴇᴅ ᴀɴᴅ ɴᴏᴡ ɪᴛ ɪs ᴠᴀʟɪᴅ ғᴏʀ {get_exp_time(VERIFY_EXPIRE)}\n\n» ɴᴏᴡ ʏᴏᴜ <a href='https://t.me/Battousai_Network/31'>ɢᴇᴛ ᴀᴄᴇss ᴛᴏ ᴀʟʟ 6 ʙᴏᴛs</a> ᴏғ @anime_raven ғᴏʀ {get_exp_time(VERIFY_EXPIRE)}.</blockquote>",
                 protect_content=False,
                 quote=True
             )
@@ -133,10 +133,10 @@ async def start_command(client: Client, message: Message):
 
             return await message.reply_photo(
                 photo=TOKEN_PIC,
-                caption=f"<blockquote><b>Hey🤴 {message.from_user.mention}</b></blockquote>\n\n<i>Your Ads token is expired, refresh your token and try again.</i> \n\n<b>Token Timeout:</b> {get_exp_time(VERIFY_EXPIRE)} \n\n<blockquote expandable><b>What is token?</b> \n<i>This is an ads token. If you pass 1 ad, you can use the bot for 24 hour after passing the ad.</i>\n\n<b>APPLE/IPHONE USERS COPY TOKEN LINK AND OPEN IN CHROME BROWSER</b></blockquote>",
+                caption=f"<blockquote><b>›› Hey!!, {message.from_user.mention} ~</b></blockquote>\n\n<i>Your Ads token is expired, refresh your token and try again.</i> \n\n<b>Token Timeout:</b> {get_exp_time(VERIFY_EXPIRE)} \n\n<blockquote expandable><b>What is token?</b> \n<i>This is an ads token. If you pass 1 ad, you can use the bot for {get_exp_time(VERIFY_EXPIRE)} after passing the ad.</i>\n\nOnce done you will <a href='https://t.me/Battousai_Network/31'>get access to all our 6 bots</a> for {get_exp_time(VERIFY_EXPIRE)} which are ⬇️\n\n» @Sukuna_Sama_Bot\n» @Devil_Fruit_Bot\n» @Lord_Aizen_Raven_Bot\n@Hitokiri_Battousai_Bot\n» @pirate_hunter_zoro_raven_bot\n» @Black_Goku_Raven_Bot\n\n<b>APPLE/IPHONE USERS COPY TOKEN LINK AND OPEN IN CHROME BROWSER</b></blockquote>",
                 reply_markup=InlineKeyboardMarkup([
-                    [InlineKeyboardButton("» ᴠᴇʀɪғʏ ʜᴇʀᴇ «", url=link)],
-                    [InlineKeyboardButton("» ᴛᴜᴛᴏʀɪᴀʟ ᴠɪᴅᴇᴏ «", url=TUT_VID)]
+                    [InlineKeyboardButton("»  ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ᴠᴇʀɪғʏ  «", url=link)],
+                    [InlineKeyboardButton("»  ʜᴏᴡ ᴛᴏ ᴠᴇʀɪʏ/ᴛᴜᴛᴏʀɪᴀʟ ᴠɪᴅᴇᴏ  «", url=TUT_VID)]
                 ])
             )
                             
@@ -218,7 +218,7 @@ async def start_command(client: Client, message: Message):
                         
     else:   
         reply_markup=InlineKeyboardMarkup([
-                    [InlineKeyboardButton("• ғᴏʀ ᴍᴏʀᴇ •", callback_data='about')],
+                    [InlineKeyboardButton("• ᴄʟɪᴄᴋ ғᴏʀ ᴍᴏʀᴇ •", callback_data='about')],
                     [InlineKeyboardButton("• sᴇᴛᴛɪɴɢs", callback_data='setting'),
                      InlineKeyboardButton(' ᴅᴇᴠᴇʟᴏᴘᴇʀ •', url='https://t.me/urr_sanjiii')],
                     [InlineKeyboardButton("• ᴏᴜʀ ᴄᴏᴍᴍᴜɴɪᴛʏ •", url='https://t.me/Battousai_Network')],
@@ -294,7 +294,7 @@ async def not_joined(client: Client, message: Message):
 
                 except Exception as e:
                     print(f"Can't Export Channel Name and Link..., Please Check If the Bot is admin in the FORCE SUB CHANNELS:\nProvided Force sub Channel:- {chat_id}")
-                    return await temp.edit(f"<b><i>! ᴇʀʀᴏʀ, ᴄᴏɴᴛᴀᴄᴛ ᴅᴇᴠᴇʟᴏᴘᴇʀ ᴛᴏ sᴏʟᴠᴇ ᴛʜᴇ ɪssᴜᴇs @urr_sanjiii</i></b>\n<blockquote expandable><b>ʀᴇᴀsᴏɴ:</b> {e}</blockquote>")
+                    return await temp.edit(f"<b>! ᴇʀʀᴏʀ, ᴄᴏɴᴛᴀᴄᴛ ᴅᴇᴠᴇʟᴏᴘᴇʀ ᴛᴏ sᴏʟᴠᴇ ᴛʜᴇ ɪssᴜᴇs @urr_sanjiii</b>\n<blockquote expandable><b>ʀᴇᴀsᴏɴ:</b> {e}</blockquote>")
 
         try:
             buttons.append([InlineKeyboardButton(text='‼️ ɴᴏᴡ ᴄʟɪᴄᴋ ʜᴇʀᴇ ‼️', url=f"https://t.me/{client.username}?start={message.command[1]}")])
@@ -328,15 +328,15 @@ async def not_joined(client: Client, message: Message):
 @Bot.on_message(filters.command('restart') & filters.private & filters.user(OWNER_ID))
 async def restart_bot(client: Client, message: Message):
     print("Restarting bot...")
-    msg = await message.reply(text=f"<b><i>» {client.name} ɢᴏɪɴɢ ᴛᴏ ʀᴇsᴛᴀʀᴛ...</i></b>")
+    msg = await message.reply(text=f"<b><i>» {client.name} ɢᴏɪɴɢ ᴛᴏ ʀᴇsᴛᴀʀᴛ...\n\n» ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ ғᴏʀ 5 sᴇᴄᴏɴᴅs...!!!</i></b>")
     try:
-        await asyncio.sleep(6)  # Wait for 6 seconds before restarting
+        await asyncio.sleep(5)  # Wait for 5 seconds before restarting
         await msg.delete()
         args = [sys.executable, "main.py"]  # Adjust this if your start file is named differently
         os.execl(sys.executable, *args)
     except Exception as e:
         print(f"Error occured while Restarting the bot: {e}")
-        return await msg.edit_text(f"<b><i>! ᴇʀʀᴏʀ, ᴄᴏɴᴛᴀᴄᴛ ᴅᴇᴠᴇʟᴏᴘᴇʀ ᴛᴏ sᴏʟᴠᴇ ᴛʜᴇ ɪssᴜᴇs @urr_sanjiii</i></b>\n<blockquote expandable><b>ʀᴇᴀsᴏɴ:</b> {e}</blockquote>")
+        return await msg.edit_text(f"<b>! ᴇʀʀᴏʀ, ᴄᴏɴᴛᴀᴄᴛ ᴅᴇᴠᴇʟᴏᴘᴇʀ ᴛᴏ sᴏʟᴠᴇ ᴛʜᴇ ɪssᴜᴇs @urr_sanjiii</b>\n<blockquote expandable><b>ʀᴇᴀsᴏɴ:</b> {e}</blockquote>")
     # Optionally, you can add cleanup tasks here
     #subprocess.Popen([sys.executable, "main.py"])  # Adjust this if your start file is named differently
     #sys.exit()

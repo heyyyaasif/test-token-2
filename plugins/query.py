@@ -110,12 +110,12 @@ def buttonStatus(pc_data: str, hc_data: str, cb_data: str) -> list:
 async def authoUser(query, id, owner_only=False):
     if not owner_only:
         if not any([id == OWNER_ID, await db.admin_exist(id)]):
-            await query.answer("❌ ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴀᴅᴍɪɴ ʙʀᴜʜ 🤧🫠!", show_alert=True)
+            await query.answer("❌ ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴀɴ ᴀᴅᴍɪɴ ɪɴ ᴛʜɪs ʙᴏᴛ ʙᴀʙᴇʏʏʏ...!!!", show_alert=True)
             return False
         return True
     else:
         if id != OWNER_ID:
-            await query.answer("❌ ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴏᴡɴᴇʀ ʙʀᴜʜ 🤧🫠 !", show_alert=True)
+            await query.answer("❌ ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴛʜᴇ ᴏᴡɴᴇʀ ᴏғ ᴛʜɪs ʙᴏᴛ ʙᴀʙᴇʏʏʏ...!!!", show_alert=True)
             return False
         return True
 
@@ -135,7 +135,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
         user_link = f"https://t.me/{user.username}" if user.username else f"tg://openmessage?user_id={OWNER_ID}" 
         ownername = f"<a href={user_link}>{user.first_name}</a>" if user.first_name else f"<a href={user_link}>no name !</a>"
         await query.edit_message_media(
-            InputMediaPhoto("https://envs.sh/H29.jpg", 
+            InputMediaPhoto("https://envs.sh/H2r.jpg", 
                             ABOUT_TXT.format(
                                 botname = client.name,
                                 ownername = ownername, 
@@ -191,10 +191,10 @@ async def cb_handler(client: Bot, query: CallbackQuery):
             )
             ),
             reply_markup=InlineKeyboardMarkup([
-                    [InlineKeyboardButton("• ғᴏʀ ᴍᴏʀᴇ •", callback_data='about')],
+                    [InlineKeyboardButton("• ᴄʟɪᴄᴋ ғᴏʀ ᴍᴏʀᴇ •", callback_data='about')],
                     [InlineKeyboardButton("• sᴇᴛᴛɪɴɢs", callback_data='setting'),
                      InlineKeyboardButton('ᴅᴇᴠᴇʟᴏᴘᴇʀ •', url='https://t.me/urr_sanjiii')],
-                    [InlineKeyboardButton("• ᴏᴜʀ ᴄᴏᴍᴍᴜɴɪᴛʏ •", url='https://t.me/Battousi_Network')],
+                    [InlineKeyboardButton("• ᴏᴜʀ ᴀɴɪᴍᴇ ᴄᴏᴍᴍᴜɴɪᴛʏ •", url='https://t.me/Battousi_Network')],
                 ]),
         )
 
@@ -318,14 +318,14 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                 if len(button) != 2:
                     markup = [[InlineKeyboardButton(
                         f'» sᴇᴛ ᴄʜᴀɴɴᴇʟ ʙᴜᴛᴛᴏɴ «', callback_data='setcb')]]
-                    return await set_msg.reply("<b>ᴘʟᴇᴀsᴇ sᴇɴᴅ ᴠᴀʟɪᴅ ᴀʀɢᴜᴍᴇɴᴛs.\nғᴏʀ ᴇxᴀᴍᴘʟᴇ:\n<blockquote><code>»  ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ  « - https://t.me/anime_raven</code></blockquote>\n\n<i>ᴛʀʏ ᴀɢᴀɪɴ ʙʏ ᴄʟɪᴄᴋɪɴɢ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ..</i></b>", reply_markup=InlineKeyboardMarkup(markup), disable_web_page_preview=True)
+                    return await set_msg.reply("<b>ᴘʟᴇᴀsᴇ sᴇɴᴅ ᴠᴀʟɪᴅ ᴀʀɢᴜᴍᴇɴᴛs.\n\nғᴏʀ ᴇxᴀᴍᴘʟᴇ:\n<blockquote><code>»  ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ  « - https://t.me/anime_raven</code></blockquote>\n\nᴛʀʏ ᴀɢᴀɪɴ ʙʏ ᴄʟɪᴄᴋɪɴɢ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ..</b>", reply_markup=InlineKeyboardMarkup(markup), disable_web_page_preview=True)
 
                 button_name = button[0].strip()
                 button_link = button[1].strip()
                 button_preview = [[InlineKeyboardButton(
                     text=button_name, url=button_link)]]
 
-                await set_msg.reply("<b><i>ʙᴜᴛᴛᴏɴ ᴀᴅᴅᴇᴅ sᴜᴄcᴇssғᴜʟʟʏ ✅</i>\n<blockquote>» sᴇᴇ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ ᴀs ᴘʀᴇᴠɪᴇᴡ ⬇️</blockquote></b>", reply_markup=InlineKeyboardMarkup(button_preview))
+                await set_msg.reply("<b>ʙᴜᴛᴛᴏɴ ᴀᴅᴅᴇᴅ sᴜᴄcᴇssғᴜʟʟʏ ✅\n\n<blockquote>» sᴇᴇ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ ᴀs ᴘʀᴇᴠɪᴇᴡ ⬇️</blockquote></b>", reply_markup=InlineKeyboardMarkup(button_preview))
                 await db.set_channel_button_link(button_name, button_link)
                 return
             except Exception as e:
@@ -333,7 +333,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                     await set_msg.reply(f"<b>! ᴇʀʀᴏʀ ᴏᴄᴄᴜʀᴇᴅ..\n<blockquote>ʀᴇᴀsᴏɴ:</b> {e}</blockquote>")
                     print(f"! Error Occurred on callback data = 'setcb' : {e}")
                 except BaseException:
-                    await client.send_message(id, text=f"<b>! ᴇʀʀᴏʀ ᴏᴄᴄᴜʀᴇᴅ..\n<blockquote><i>ʀᴇᴀsᴏɴ: 1 minute Time out ..</i></b></blockquote>", disable_notification=True)
+                    await client.send_message(id, text=f"<b>! ᴇʀʀᴏʀ ᴏᴄᴄᴜʀᴇᴅ..\n\n<blockquote>ʀᴇᴀsᴏɴ: 1 minute Time out ..</b></blockquote>", disable_notification=True)
                     print(
                         f"! Error Occurred on callback data = 'setcb' -> Rᴇᴀsᴏɴ: 1 minute Time out ..")
 
@@ -395,26 +395,26 @@ async def cb_handler(client: Bot, query: CallbackQuery):
             try:
 
                 timer = convert_time(await db.get_del_timer())
-                set_msg = await client.ask(chat_id=id, text=f'<b><blockquote>» ᴄᴜʀʀᴇɴᴛ ᴛɪᴍᴇʀ: {timer}</blockquote>\n\n» ᴛᴏ ᴄʜᴀɴɢᴇ ᴛɪᴍᴇʀ, ᴘʟᴇᴀsᴇ sᴇɴᴅ ᴠᴀʟɪᴅ ɴᴜᴍʙᴇʀ ɪɴ sᴇᴄᴏɴᴅs ᴡɪᴛʜɪɴ 1 ᴍɪɴᴜᴛᴇ.\n<blockquote>ғᴏʀ ᴇxᴀᴍᴘʟᴇ: <code>300</code>, <code>600</code>, <code>900</code></b></blockquote>', timeout=60)
+                set_msg = await client.ask(chat_id=id, text=f'<b><blockquote>» ᴄᴜʀʀᴇɴᴛ ᴛɪᴍᴇʀ: {timer}</blockquote>\n\n» ᴛᴏ ᴄʜᴀɴɢᴇ ᴛɪᴍᴇʀ, ᴘʟᴇᴀsᴇ sᴇɴᴅ ᴠᴀʟɪᴅ ɴᴜᴍʙᴇʀ ɪɴ sᴇᴄᴏɴᴅs ᴡɪᴛʜɪɴ 1 ᴍɪɴᴜᴛᴇ.\n\n<blockquote>ғᴏʀ ᴇxᴀᴍᴘʟᴇ: <code>300</code>, <code>600</code>, <code>900</code></b></blockquote>', timeout=60)
                 del_timer = set_msg.text.split()
 
                 if len(del_timer) == 1 and del_timer[0].isdigit():
                     DEL_TIMER = int(del_timer[0])
                     await db.set_del_timer(DEL_TIMER)
                     timer = convert_time(DEL_TIMER)
-                    await set_msg.reply(f"<b><i>ᴛɪᴍᴇʀ ᴀᴅᴅᴇᴅ sᴜᴄcᴇssғᴜʟʟʏ ✅</i>\n<blockquote>» ᴄᴜʀʀᴇɴᴛ ᴛɪᴍᴇʀ: {timer}</blockquote></b>")
+                    await set_msg.reply(f"<b>ᴛɪᴍᴇʀ ᴀᴅᴅᴇᴅ sᴜᴄcᴇssғᴜʟʟʏ ✅\n\n<blockquote>» ᴄᴜʀʀᴇɴᴛ ᴛɪᴍᴇʀ: {timer}</blockquote></b>")
                 else:
                     markup = [[InlineKeyboardButton(
                         '» sᴇᴛ ᴅᴇʟᴇᴛᴇ ᴛɪᴍᴇʀ «', callback_data='set_timer')]]
-                    return await set_msg.reply("<b>ᴘʟᴇᴀsᴇ sᴇɴᴅ ᴠᴀʟɪᴅ ɴᴜᴍʙᴇʀ ɪɴ sᴇᴄᴏɴᴅs.\n<blockquote>ғᴏʀ ᴇxᴀᴍᴘʟᴇ: <code>300</code>, <code>600</code>, <code>900</code></blockquote>\n\n<i>Tʀʏ ᴀɢᴀɪɴ ʙʏ ᴄʟɪᴄᴋɪɴɢ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ..</i></b>", reply_markup=InlineKeyboardMarkup(markup))
+                    return await set_msg.reply("<b>ᴘʟᴇᴀsᴇ sᴇɴᴅ ᴠᴀʟɪᴅ ɴᴜᴍʙᴇʀ ɪɴ sᴇᴄᴏɴᴅs.\n\n<blockquote>ғᴏʀ ᴇxᴀᴍᴘʟᴇ: <code>300</code>, <code>600</code>, <code>900</code></blockquote>\n\n» ᴛʀʏ ᴀɢᴀɪɴ ʙʏ ᴄʟɪᴄᴋɪɴɢ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ.</b>", reply_markup=InlineKeyboardMarkup(markup))
 
             except Exception as e:
                 try:
-                    await set_msg.reply(f"<b>! ᴇʀʀᴏʀ ᴏᴄᴄᴜʀᴇᴅ..\n<blockquote>ʀᴇᴀsᴏɴ:</b> {e}</blockquote>")
+                    await set_msg.reply(f"<b>! ᴇʀʀᴏʀ ᴏᴄᴄᴜʀᴇᴅ..\n\n<blockquote>ʀᴇᴀsᴏɴ:</b> {e}</blockquote>")
                     print(
                         f"! Error Occurred on callback data = 'set_timer' : {e}")
                 except BaseException:
-                    await client.send_message(id, text=f"<b>! ᴇʀʀᴏʀ ᴏᴄᴄᴜʀᴇᴅ..\n<blockquote><i>ʀᴇᴀsᴏɴ: 1 minute Time out ..</i></b></blockquote>", disable_notification=True)
+                    await client.send_message(id, text=f"<b>! ᴇʀʀᴏʀ ᴏᴄᴄᴜʀᴇᴅ..\n\n<blockquote>» ʀᴇᴀsᴏɴ: 1 ᴍɪɴᴜᴛᴇ ᴛɪᴍᴇ ᴏᴜᴛ...!!!</b></blockquote>", disable_notification=True)
                     print(
                         f"! Error Occurred on callback data = 'set_timer' -> Rᴇᴀsᴏɴ: 1 minute Time out ..")
 
@@ -455,7 +455,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                 REQFSUB_CHNLS = await db.get_reqChannel()
                 if REQFSUB_CHNLS:
                     LISTS = ""
-                    channel_name = "<i>ᴜɴᴀʙʟᴇ ʟᴏᴀᴅ ɴᴀᴍᴇ..</i>"
+                    channel_name = "ᴜɴᴀʙʟᴇ ʟᴏᴀᴅ ɴᴀᴍᴇs..."
                     for CHNL in REQFSUB_CHNLS:
                         await query.message.reply_chat_action(ChatAction.TYPING)
                         try:
@@ -477,7 +477,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                     [InlineKeyboardButton("• ᴄʟᴇᴀʀ ᴜsᴇʀs", "clear_users"), InlineKeyboardButton(
                         "cʟᴇᴀʀ cʜᴀɴɴᴇʟs •", "clear_chnls")],
                     [InlineKeyboardButton(
-                        "»  ʀᴇғʀᴇsʜ sᴛᴀᴛᴜs  «", "more_settings")],
+                        "•  ʀᴇғʀᴇsʜ sᴛᴀᴛᴜs  •", "more_settings")],
                     [InlineKeyboardButton("• ʙᴀᴄᴋ", "req_fsub"), InlineKeyboardButton(
                         "ᴄʟᴏsᴇ •", "close")]
                 ]
@@ -507,14 +507,14 @@ async def cb_handler(client: Bot, query: CallbackQuery):
             user_reply = await client.ask(query.from_user.id, text=CLEAR_USERS_TXT, reply_markup=ReplyKeyboardMarkup(buttons, one_time_keyboard=True, resize_keyboard=True))
 
             if user_reply.text == 'CANCEL':
-                return await user_reply.reply("<b><i>🆑 ᴄᴀɴᴄᴇʟʟᴇᴅ...!!!</i></b>", reply_markup=ReplyKeyboardRemove())
+                return await user_reply.reply("<b>🆑 ᴄᴀɴᴄᴇʟʟᴇᴅ...!!!</b>", reply_markup=ReplyKeyboardRemove())
 
             elif user_reply.text in REQFSUB_CHNLS:
                 try:
                     await db.clear_reqSent_user(int(user_reply.text))
                     return await user_reply.reply(f"<b><blockquote>✅ ᴜsᴇʀ ᴅᴀᴛᴀ sᴜᴄᴄᴇssғᴜʟʟʏ ᴄʟᴇᴀʀᴇᴅ ғʀᴏᴍ ᴄʜᴀɴɴᴇʟ ɪᴅ: <code>{user_reply.text}</code></blockquote></b>", reply_markup=ReplyKeyboardRemove())
                 except Exception as e:
-                    return await user_reply.reply(f"<b>! ᴇʀʀᴏʀ ᴏᴄᴄᴜʀᴇᴅ...\n<blockquote>ʀᴇᴀsᴏɴ:</b> {e}</blockquote>", reply_markup=ReplyKeyboardRemove())
+                    return await user_reply.reply(f"<b>! ᴇʀʀᴏʀ ᴏᴄᴄᴜʀᴇᴅ...\n\n<blockquote>ʀᴇᴀsᴏɴ:</b> {e}</blockquote>", reply_markup=ReplyKeyboardRemove())
 
             elif user_reply.text == 'DELETE ALL CHANNELS USER':
                 try:
@@ -549,7 +549,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
             user_reply = await client.ask(query.from_user.id, text=CLEAR_CHNLS_TXT, reply_markup=ReplyKeyboardMarkup(buttons, one_time_keyboard=True, resize_keyboard=True))
 
             if user_reply.text == 'CANCEL':
-                return await user_reply.reply("<b><i>🆑 ᴄᴀɴᴄᴇʟʟᴇᴅ...!!!</i></b>", reply_markup=ReplyKeyboardRemove())
+                return await user_reply.reply("<b>🆑 ᴄᴀɴᴄᴇʟʟᴇᴅ...!!!</b>", reply_markup=ReplyKeyboardRemove())
 
             elif user_reply.text in REQFSUB_CHNLS:
                 try:
@@ -566,7 +566,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
 
                     return await user_reply.reply(f"<b><blockquote><code>{user_reply.text}</code> ᴄʜᴀɴɴᴇʟ ɪᴅ ᴀʟᴏɴɢ ᴡɪᴛʜ ɪᴛs ᴅᴀᴛᴀ sᴜᴄᴄᴇssғᴜʟʟʏ ᴅᴇʟᴇᴛᴇᴅ ✅</blockquote></b>", reply_markup=ReplyKeyboardRemove())
                 except Exception as e:
-                    return await user_reply.reply(f"<b>! ᴇʀʀᴏʀ ᴏᴄᴄᴜʀᴇᴅ...\n<blockquote>ʀᴇᴀsᴏɴ:</b> {e}</blockquote>", reply_markup=ReplyKeyboardRemove())
+                    return await user_reply.reply(f"<b>! ᴇʀʀᴏʀ ᴏᴄᴄᴜʀᴇᴅ...\n\n<blockquote>ʀᴇᴀsᴏɴ:</b> {e}</blockquote>", reply_markup=ReplyKeyboardRemove())
 
             elif user_reply.text == 'DELETE ALL CHANNEL IDS':
                 try:
@@ -585,7 +585,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                     return await user_reply.reply(f"<b><blockquote>ᴀʟʟ ᴄʜᴀɴɴᴇʟ ɪᴅs ᴀʟᴏɴɢ ᴡɪᴛʜ ɪᴛs ᴅᴀᴛᴀ sᴜᴄᴄᴇssғᴜʟʟʏ ᴅᴇʟᴇᴛᴇᴅ ✅</blockquote></b>", reply_markup=ReplyKeyboardRemove())
 
                 except Exception as e:
-                    return await user_reply.reply(f"<b>! ᴇʀʀᴏʀ ᴏᴄᴄᴜʀᴇᴅ...\n<blockquote>ʀᴇᴀsᴏɴ:</b> {e}</blockquote>", reply_markup=ReplyKeyboardRemove())
+                    return await user_reply.reply(f"<b>! ᴇʀʀᴏʀ ᴏᴄᴄᴜʀᴇᴅ...\n\n<blockquote>ʀᴇᴀsᴏɴ:</b> {e}</blockquote>", reply_markup=ReplyKeyboardRemove())
 
             else:
                 return await user_reply.reply(f"<b><blockquote>INVALID SELECTIONS</blockquote></b>", reply_markup=ReplyKeyboardRemove())
@@ -631,7 +631,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                     return await user_reply.reply(f"<b><blockquote><code>{channel_id}</code> ᴄʜᴀɴɴᴇʟs ʟɪɴᴋ sᴜᴄᴄᴇssғᴜʟʟʏ ᴅᴇʟᴇᴛᴇᴅ ✅</blockquote></b>", reply_markup=ReplyKeyboardRemove())
 
                 except Exception as e:
-                    return await user_reply.reply(f"<b>! ᴇʀʀᴏʀ ᴏᴄᴄᴜʀᴇᴅ...\n<blockquote>ʀᴇᴀsᴏɴ:</b> {e}</blockquote>", reply_markup=ReplyKeyboardRemove())
+                    return await user_reply.reply(f"<b>! ᴇʀʀᴏʀ ᴏᴄᴄᴜʀᴇᴅ...\n\n<blockquote>ʀᴇᴀsᴏɴ:</b> {e}</blockquote>", reply_markup=ReplyKeyboardRemove())
 
             elif user_reply.text == 'DELETE ALL REQUEST LINKS':
                 try:
@@ -649,7 +649,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                     return await user_reply.reply(f"<b>⁉️ ᴏᴘᴇʀᴀᴛɪᴏɴ ʀᴇsᴜʟᴛ:</b>\n{result.strip()}", reply_markup=ReplyKeyboardRemove())
 
                 except Exception as e:
-                    return await user_reply.reply(f"<b>! ᴇʀʀᴏʀ ᴏᴄᴄᴜʀᴇᴅ...\n<blockquote>ʀᴇᴀsᴏɴ:</b> {e}</blockquote>", reply_markup=ReplyKeyboardRemove())
+                    return await user_reply.reply(f"<b>! ᴇʀʀᴏʀ ᴏᴄᴄᴜʀᴇᴅ...\n\n<blockquote>ʀᴇᴀsᴏɴ:</b> {e}</blockquote>", reply_markup=ReplyKeyboardRemove())
 
             else:
                 return await user_reply.reply(f"<b><blockquote>INVALID SELECTIONS</blockquote></b>", reply_markup=ReplyKeyboardRemove())
@@ -707,12 +707,12 @@ async def cb_handler(client: Bot, query: CallbackQuery):
 
             # Response message
                 response_text = (
-                    f"<b>• sʜᴏʀᴛɴᴇʀ ᴅᴇᴛᴀɪʟs</b>\n\n"
+                    f"<b>𝐒𝐇𝐎𝐑𝐓𝐍𝐄𝐑 𝐃𝐄𝐓𝐀𝐈𝐋𝐒</b>\n\n"
                     f"» sʜᴏʀᴛɴᴇʀ sɪᴛᴇ: {shortener_url_display}\n"
-                    f"» ᴀᴘɪ ᴛᴏᴋᴇɴ: {shortener_api_display}\n\n"
-                    f"» sᴛᴀᴛᴜs: {status}\n\n"
-                    f"» ᴠᴇʀɪғɪᴇᴅ ᴛɪᴍᴇ: {verified_time_display}\n"
-                    f"» ᴛᴜᴛᴏʀɪᴀʟ ᴠɪᴅᴇᴏ: {tut_video_display}"
+                    f"» sʜᴏʀᴛɴᴇʀ ᴀᴘɪ ᴛᴏᴋᴇɴ: {shortener_api_display}\n\n"
+                    f"» sʜᴏʀᴛɴᴇʀ sᴛᴀᴛᴜs: {status}\n\n"
+                    f"» sʜᴏʀᴛɴᴇʀ ᴠᴇʀɪғɪᴇᴅ ᴛɪᴍᴇ: {verified_time_display}\n"
+                    f"» sʜᴏʀᴛɴᴇʀ ᴛᴜᴛᴏʀɪᴀʟ ᴠɪᴅᴇᴏ: {tut_video_display}"
                 )
 
             # Update the message with the fetched details
@@ -746,7 +746,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
         else:
         # Enable shortener, prompt for URL and API Key
             await query.answer("» sʜᴏʀᴛɴᴇʀ ᴇɴᴀʙʟᴇᴅ ✅. ᴘʟᴇᴀsᴇ ᴘʀᴏᴠɪᴅᴇ ᴛʜᴇ sʜᴏʀᴛɴᴇʀ ᴜʀʟ ᴀɴᴅ ᴀᴘɪ ᴋᴇʏ.", show_alert=True)
-            await query.message.reply("» sᴇɴᴅ ᴛʜᴇ sʜᴏʀᴛɴᴇʀ URL ᴀɴᴅ API ᴋᴇʏ ɪɴ ᴛʜᴇ ғᴏʀᴍᴀᴛ:\n`<shortener_url> <api_key>`")
+            await query.message.reply("» sᴇɴᴅ ᴛʜᴇ 𝐒𝐇𝐎𝐑𝐓𝐍𝐄𝐑 𝐔𝐑𝐋 ᴀɴᴅ 𝐀𝐏𝐈 𝐊𝐄𝐘 ɪɴ ᴛʜᴇ ғᴏʀᴍᴀᴛ:\n`<shortener_url> <api_key>`")
 
     
 
@@ -757,7 +757,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
             # Step 1: Prompt for the shortener URL with a timeout of 1 minute
                 await query.answer("» ᴘʟᴇᴀsᴇ sᴇɴᴅ ᴛʜᴇ sʜᴏʀᴛɴᴇʀ ᴜʀʟ ᴡɪᴛʜɪɴ 1 ᴍɪɴᴜᴛᴇ...")
                 set_msg_url = await query.message.reply(
-                    "» ᴘʟᴇᴀsᴇ ᴘʀᴏᴠɪᴅᴇ ᴛʜᴇ sʜᴏʀᴛɴᴇʀ sɪᴛᴇ ᴜʀʟ (e.g., https://example.com) ᴡɪᴛʜɪɴ 1 ᴍɪɴᴜᴛᴇ..",
+                    "» ᴘʟᴇᴀsᴇ ᴘʀᴏᴠɪᴅᴇ ᴛʜᴇ sʜᴏʀᴛɴᴇʀ sɪᴛᴇ ᴜʀʟ (e.g., inshorturl.com) ᴡɪᴛʜɪɴ 1 ᴍɪɴᴜᴛᴇ..",
                     reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('•  ʙᴀᴄᴋ  •', callback_data='set_shortener')]])
                 )
                 site_msg = await client.ask(
@@ -770,17 +770,17 @@ async def cb_handler(client: Bot, query: CallbackQuery):
 
 
             # Confirm the shortener site URL
-                await site_msg.reply(f"» sʜᴏʀᴛɴᴇʀ sɪᴛᴇ URL sᴇᴛ ᴛᴏ: {shortener_url}\n\n» ɴᴏᴡ ᴘʟᴇᴀsᴇ sᴇɴᴅ ᴛʜᴇ API ᴋᴇʏ.")
+                await site_msg.reply(f"» sʜᴏʀᴛɴᴇʀ sɪᴛᴇ ᴜʀʟ sᴇᴛ ᴛᴏ: {shortener_url}\n\n» ɴᴏᴡ ᴘʟᴇᴀsᴇ sᴇɴᴅ ᴛʜᴇ ᴀᴘɪ ᴋᴇʏ.")
 
             # Step 3: Prompt for API key
                 set_msg_api = await query.message.reply(
-                    "» ᴘʟᴇᴀsᴇ ᴘʀᴏᴠɪᴅᴇ ᴛʜᴇ API ᴋᴇʏ ғᴏʀ ᴛʜᴇ sʜᴏʀᴛɴᴇʀ ᴡɪᴛʜɪɴ 1 ᴍɪɴᴜᴛᴇ.",
+                    "» ᴘʟᴇᴀsᴇ ᴘʀᴏᴠɪᴅᴇ ᴛʜᴇ ᴀᴘɪ ᴋᴇʏ ғᴏʀ ᴛʜᴇ sʜᴏʀᴛɴᴇʀ ᴡɪᴛʜɪɴ 1 ᴍɪɴᴜᴛᴇ.",
                     reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('•  ʙᴀᴄᴋ  •', callback_data='set_shortener')]])
                 )
 
                 api_msg = await client.ask(
                     chat_id=query.from_user.id,
-                    text="» ᴇɴᴛᴇʀ API ᴋᴇʏ ғᴏʀ sʜᴏʀᴛɴᴇʀ:",
+                    text="» ᴘʟᴇᴀsᴇ ᴇɴᴛᴇʀ ᴀᴘɪ ᴋᴇʏ ғᴏʀ sʜᴏʀᴛɴᴇʀ:",
                     timeout=60
                 )
 
@@ -800,7 +800,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                 )
             except asyncio.TimeoutError:
                 await query.message.reply(
-                    "» ʏᴏᴜ ᴅɪᴅ ɴᴏᴛ ᴘʀᴏᴠɪᴅᴇ ᴛʜᴇ ᴅᴇᴛᴀɪʟs ɪɴ ᴛɪᴍᴇ. ᴘʟᴇᴀsᴇ ᴛʀʏ ᴀɢᴀɪɴ.",
+                    "» 𝐀𝐋𝐄𝐑𝐓: Timeout\n\n» ʏᴏᴜ ᴅɪᴅ ɴᴏᴛ ᴘʀᴏᴠɪᴅᴇ ᴛʜᴇ ᴅᴇᴛᴀɪʟs ɪɴ ɢɪᴠᴇɴ ᴛɪᴍᴇ. ᴘʟᴇᴀsᴇ ᴛʀʏ ᴀɢᴀɪɴ.",
                     reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('•  ʙᴀᴄᴋ  •', callback_data='set_shortener')]])
                 )
             except Exception as e:
@@ -838,17 +838,17 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                         shortener_status=shortener_status),
                     reply_markup=InlineKeyboardMarkup([
                         [mode_button],
-                        [InlineKeyboardButton('sᴇᴛᴛɪɴɢs', callback_data='shortener_settings'),
-                     InlineKeyboardButton('ʀᴇғʀᴇsʜ', callback_data='set_shortener')],
-                        [InlineKeyboardButton('sᴇᴛ ᴠᴇʀɪғɪᴇᴅ ᴛɪᴍᴇ', callback_data='set_verify_time')],
-                     [InlineKeyboardButton('sᴇᴛ ᴛᴜᴛᴏʀɪᴀʟ ᴠɪᴅᴇᴏ', callback_data='set_tut_video')],
-                        [InlineKeyboardButton('•  ᴄʟᴏsᴇ  •', callback_data='close')]
+                        [InlineKeyboardButton('Settings ⚙️', callback_data='shortener_settings'),
+                     InlineKeyboardButton('🔄 Refresh', callback_data='set_shortener')],
+                        [InlineKeyboardButton('Set Verified Time ⏱', callback_data='set_verify_time'),
+                     InlineKeyboardButton('Set Tutorial Video 🎥', callback_data='set_tut_video')],
+                        [InlineKeyboardButton('Close ✖️', callback_data='close')]
                     ])
                 )
             except Exception as e:
             # If an error occurs, display an error message with a contact option
                 await query.message.edit_text(
-                    f"<b>! ᴇʀʀᴏʀ ᴏᴄᴄᴜʀᴇᴅ..\n<blockquote>ʀᴇᴀsᴏɴ:</b> {e}</blockquote><b><i>ᴄᴏɴᴛᴀᴄᴛ ᴅᴇᴠᴇʟᴏᴘᴇʀ: @urr_sanjiii</i></b>",
+                    f"<b>! ᴇʀʀᴏʀ ᴏᴄᴄᴜʀᴇᴅ..\n\n<blockquote>ʀᴇᴀsᴏɴ:</b> {e}</blockquote><b>ᴄᴏɴᴛᴀᴄᴛ ᴅᴇᴠᴇʟᴏᴘᴇʀ: @urr_sanjiii</b>",
                     reply_markup=InlineKeyboardMarkup(
                         [[InlineKeyboardButton("•  ᴄʟᴏsᴇ  •", callback_data="close")]]
                     )
@@ -884,18 +884,18 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                 else:
                 # If the URL is invalid, prompt the user to try again
                     markup = [[InlineKeyboardButton(
-                        'sᴇᴛ ᴛᴜᴛᴏʀɪᴀʟ ᴠɪᴅᴇᴏ URL', callback_data='set_tut_video')]]
+                        'sᴇᴛ ᴛᴜᴛᴏʀɪᴀʟ ᴠɪᴅᴇᴏ ᴜʀʟ', callback_data='set_tut_video')]]
                     return await set_msg.reply(
-                        "<b>ᴘʟᴇᴀsᴇ sᴇɴᴅ ᴀ ʟɪɴᴋ ᴛᴏ ᴀ ᴠᴀʟɪᴅ ᴠɪᴅᴇᴏ.\n\n<blockquote>ғᴏʀ ᴇxᴀᴍᴘʟᴇ: <code>https://t.me/anime_raven/728</code></blockquote>\n\n» ᴛʀʏ ᴀɢᴀɪɴ ʙʏ ᴄʟɪᴄᴋɪɴɢ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ..!!</b>", reply_markup=InlineKeyboardMarkup(markup))
+                        "<b>ᴘʟᴇᴀsᴇ sᴇɴᴅ ᴀ ʟɪɴᴋ ᴛᴏ ᴀ ᴠᴀʟɪᴅ ᴠɪᴅᴇᴏ.\n\n<blockquote>ғᴏʀ ᴇxᴀᴍᴘʟᴇ: <code>https://t.me/Battousai_Network/31</code></blockquote>\n\n» ᴛʀʏ ᴀɢᴀɪɴ ʙʏ ᴄʟɪᴄᴋɪɴɢ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ..!!</b>", reply_markup=InlineKeyboardMarkup(markup))
 
             except Exception as e:
                 try:
                 # Handle any exceptions that occur during the process
-                    await set_msg.reply(f"<b>! ᴇʀʀᴏʀ ᴏᴄᴄᴜʀᴇᴅ..\n<blockquote>ʀᴇᴀsᴏɴ:</b> {e}</blockquote>")
+                    await set_msg.reply(f"<b>! ᴇʀʀᴏʀ ᴏᴄᴄᴜʀᴇᴅ..\n\n<blockquote>ʀᴇᴀsᴏɴ:</b> {e}</blockquote>")
                     print(f"! Error Occurred on callback data = 'set_tut_video' : {e}")
                 except BaseException:
                 # If an error occurs while sending the error message, send a timeout message
-                    await client.send_message(id, text=f"<b>! ᴇʀʀᴏʀ ᴏᴄᴄᴜʀᴇᴅ..\n<blockquote>ʀᴇᴀsᴏɴ: 1 minute Time out...!!!</b></blockquote>", disable_notification=True)
+                    await client.send_message(id, text=f"<b>! ᴇʀʀᴏʀ ᴏᴄᴄᴜʀᴇᴅ..\n\n<blockquote>ʀᴇᴀsᴏɴ: 1 minute Time out...!!!</b></blockquote>", disable_notification=True)
                     print(f"! Error Occurred on callback data = 'set_tut_video' -> Reason: 1 minute Time out ..")
 
 
@@ -914,7 +914,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                 set_msg = await client.ask(
                     chat_id=id,
                     text=(
-                        f"<b><blockquote>» ᴄᴜʀʀᴇɴᴛ ᴛɪᴍᴇʀ: {time_display}</blockquote>\n\n"
+                        f"<b><blockquote>» Current Timer: {time_display}</blockquote>\n\n"
                         f"To change the timer, please send a valid number in seconds within 1 minute.\n\n"
                         f"<blockquote>For example: <code>300</code>, <code>600</code>, <code>900</code></blockquote></b>"
                     ),
@@ -933,11 +933,11 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                     # Confirm the update to the user
                     await set_msg.reply(
                         f"<b>Timer updated successfully ✅\n\n"
-                        f"<blockquote>» ᴄᴜʀʀᴇɴᴛ ᴛɪᴍᴇʀ: {formatted_time}</blockquote></b>"
+                        f"<blockquote>» Current Timer: {formatted_time}</blockquote></b>"
                     )
                 else:
                     # Handle invalid input
-                    markup = [[InlineKeyboardButton('sᴇᴛ ᴠᴇʀɪғʏ ᴛɪᴍᴇʀ', callback_data='set_verify_time')]]
+                    markup = [[InlineKeyboardButton('• ᴄʟɪᴄᴋ ᴛᴏ sᴇᴛ ᴠᴇʀɪғʏ ᴛɪᴍᴇʀ •', callback_data='set_verify_time')]]
                     return await set_msg.reply(
                         "<b>Please send a valid number in seconds.\n\n"
                         "<blockquote>For example: <code>300</code>, <code>600</code>, <code>900</code></blockquote>\n\n"
@@ -993,8 +993,8 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                 await query.edit_message_caption(
                     caption="No shortener details found. Please set the shortener details first.",
                     reply_markup=InlineKeyboardMarkup([
-                        [InlineKeyboardButton('sᴇᴛ sʜᴏʀᴛɴᴇʀ ᴅᴇᴛᴀɪʟs', callback_data='set_shortener_details')],
-                        [InlineKeyboardButton('•  ᴄʟᴏsᴇ  •', callback_data='close')]
+                        [InlineKeyboardButton('• ᴄʟɪᴄᴋ ᴛᴏ sᴇᴛ sʜᴏʀᴛɴᴇʀ ᴅᴇᴛᴀɪʟs •', callback_data='set_shortener_details')],
+                        [InlineKeyboardButton('• ᴄʟɪᴄᴋ ᴛᴏ ᴄʟᴏsᴇ ᴛʜɪs ᴘᴀɴᴇʟ •', callback_data='close')]
                     ])
                 )
         except Exception as e:
@@ -1013,7 +1013,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                 caption="Shortener has been disabled ❌",
                 reply_markup=InlineKeyboardMarkup([
                     [InlineKeyboardButton('ᴇɴᴀʙʟᴇ sʜᴏʀᴛɴᴇʀ ✅', callback_data='enable_shortener')],
-                    [InlineKeyboardButton('•  ᴄʟᴏsᴇ  •', callback_data='close')]
+                    [InlineKeyboardButton('• ᴄʟɪᴄᴋ ᴛᴏ ᴄʟᴏsᴇ ᴛʜɪs ᴘᴀɴᴇʟ •', callback_data='close')]
                 ])
             )
         else:
@@ -1029,18 +1029,18 @@ async def cb_handler(client: Bot, query: CallbackQuery):
         if anime_data and "data" in anime_data:
             anime = anime_data["data"]
             details = (
-                f"» Title: {style_anime_title(anime.get('title'))}\n"
-                f"» Type: {anime.get('type', 'N/A')}\n"
-                f"» Episodes: {anime.get('episodes', 'Unknown')}\n"
-                f"» Score: {anime.get('score', 'N/A')}\n"
-                f"» Synopsis: {anime.get('synopsis', 'No synopsis available.')}\n"
+                f"» ᴛɪᴛʟᴇ: {style_anime_title(anime.get('title'))}\n"
+                f"» ᴛʏᴘᴇ: {anime.get('type', 'N/A')}\n"
+                f"» ᴇᴘɪsᴏᴅᴇs: {anime.get('episodes', 'Unknown')}\n"
+                f"» sᴄᴏʀᴇ: {anime.get('score', 'N/A')}\n"
+                f"» sʏɴᴏᴘsɪs: {anime.get('synopsis', 'No synopsis available.')}\n"
                 f"[MyAnimeList]({anime.get('url', '#')})"
             )
 
             await query.message.edit_text(
                 details,
                 reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton("•  ᴄʟᴏsᴇ  •", callback_data='close')]]
+                    [[InlineKeyboardButton("• ᴄʟɪᴄᴋ ᴛᴏ ᴄʟᴏsᴇ ᴛʜɪs ᴘᴀɴᴇʟ •", callback_data='close')]]
                 ),
                 parse_mode=ParseMode.MARKDOWN
             )

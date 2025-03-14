@@ -109,7 +109,7 @@ async def add_forcesub(client: Client, message: Message):
     reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("•  ᴄʟᴏsᴇ  •", callback_data="close")]])
 
     if not fsubs:
-        await pro.edit("<b>You need to add channel IDs\n\n<blockquote><u>EXAMPLE</u>:\n/add_fsub [channel_ids] :</b> You can add one or multiple channel IDs at a time.</blockquote>", reply_markup=reply_markup)
+        await pro.edit("<b>You need to add channel IDs\n\n<blockquote><u>EXAMPLE</u>: /add_fsub [channel_ids] :</b> You can add one or multiple channel IDs at a time.</blockquote>", reply_markup=reply_markup)
         return
 
     channel_list = ""
@@ -162,7 +162,7 @@ async def delete_all_forcesub(client: Client, message: Message):
     reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("•  ᴄʟᴏsᴇ  •", callback_data="close")]])
 
     if not fsubs:
-        return await pro.edit("<b>⁉️ Please, provide valid IDs or arguments\n\n<blockquote><u>EXAMPLES</u>:\n/del_fsub [channel_ids] :</b> To delete one or multiple specified IDs\n<code>/del_fsub all</code>: To delete all available force-sub IDs</blockquote>", reply_markup=reply_markup)
+        return await pro.edit("<b>⁉️ Please, provide valid IDs or arguments\n\n<blockquote><u>EXAMPLES</u>:/del_fsub [channel_ids] :</b> To delete one or multiple specified IDs\n<code>/del_fsub all</code>: To delete all available force-sub IDs</blockquote>", reply_markup=reply_markup)
 
     if len(fsubs) == 1 and fsubs[0].lower() == "all":
         if channels:
@@ -273,7 +273,7 @@ async def delete_admins(client: Client, message: Message):
     reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("•  ᴄʟᴏsᴇ  •", callback_data="close")]])
 
     if not admins:
-        return await pro.edit("<b>⁉️ Please, provide valid IDs or arguments</b>\n\n<blockquote><b><u>EXAMPLES:</u>\n/del_admins [user_ids] :</b> To delete one or multiple specified IDs\n<code>/del_admins all</code>: To delete all available user IDs</blockquote>", reply_markup=reply_markup)
+        return await pro.edit("<b>⁉️ Please, provide valid IDs or arguments</b>\n\n<blockquote><b><u>EXAMPLES:</u> /del_admins [user_ids] :</b> To delete one or multiple specified IDs\n<code>/del_admins all</code>: To delete all available user IDs</blockquote>", reply_markup=reply_markup)
 
     if len(admins) == 1 and admins[0].lower() == "all":
         if admin_ids:
@@ -319,16 +319,12 @@ async def get_admins(client: Client, message: Message):
             admin_list += f"<b><blockquote>ID: <code>{id}</code></blockquote></b>\n\n"
 
     reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("•  ᴄʟᴏsᴇ  •", callback_data="close")]])
-    await pro.edit(f"<b>Admin list:</b>\n\n{admin_list}", reply_markup=reply_markup)
-
-# +++ Customised by Rohit[telegram username: @rohit_1888] +++
-
-
+    await pro.edit(f"<b>ᴀᴅᴍɪɴ's ʟɪsᴛ:</b>\n\n{admin_list}", reply_markup=reply_markup)
 
 #Commands for banned user function............
 @Bot.on_message(filters.command('add_banuser') & filters.private & is_admin)
 async def add_banuser(client:Client, message:Message):        
-    pro = await message.reply("<b><i>ᴘʀᴏᴄᴇssɪɴɢ....</i></b>", quote=True)
+    pro = await message.reply("<b>ᴘʀᴏᴄᴇssɪɴɢ....</b>", quote=True)
     check, autho_users = 0, []
     banuser_ids = await db.get_ban_users()
     autho_users = await db.get_all_admins(); autho_users.append(OWNER_ID)
@@ -337,7 +333,7 @@ async def add_banuser(client:Client, message:Message):
     reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("•  ᴄʟᴏsᴇ  •", callback_data = "close")]])
 
     if not banusers:
-        return await pro.edit("<b>ʏᴏᴜ ɴᴇᴇᴅ ᴛᴏ ᴀᴅᴅ ʙᴀɴɴᴇᴅ ᴜsᴇʀ ɪᴅs\n\n<blockquote><u>EXAMPLE</u> :\n/add_banuser [user_id] :</b> ʏᴏᴜ ᴄᴀɴ ᴀᴅᴅ ᴏɴᴇ ᴏʀ ᴍᴜʟᴛɪᴘʟᴇ ᴜsᴇʀ ɪᴅ ᴀᴛ ᴀ ᴛɪᴍᴇ.</blockquote>", reply_markup=reply_markup)
+        return await pro.edit("<b>ʏᴏᴜ ɴᴇᴇᴅ ᴛᴏ ᴀᴅᴅ ʙᴀɴɴᴇᴅ ᴜsᴇʀ ɪᴅs\n\n<blockquote><u>EXAMPLE</u> : /add_banuser [user_id] :</b> ʏᴏᴜ ᴄᴀɴ ᴀᴅᴅ ᴏɴᴇ ᴏʀ ᴍᴜʟᴛɪᴘʟᴇ ᴜsᴇʀ ɪᴅ ᴀᴛ ᴀ ᴛɪᴍᴇ.</blockquote>", reply_markup=reply_markup)
 
     banuser_list = ""
     for id in banusers:
@@ -375,7 +371,7 @@ async def add_banuser(client:Client, message:Message):
 
 @Bot.on_message(filters.command('del_banuser') & filters.private & is_admin)
 async def delete_banuser(client:Client, message:Message):        
-    pro = await message.reply("<b><i>ᴘʀᴏᴄᴇssɪɴɢ....</i></b>", quote=True)
+    pro = await message.reply("<b>ᴘʀᴏᴄᴇssɪɴɢ....</b>", quote=True)
     banuser_ids = await db.get_ban_users()
     banusers = message.text.split()[1:]
 
@@ -412,8 +408,6 @@ async def delete_banuser(client:Client, message:Message):
 
     else:
         await pro.edit("<b><blockquote>⁉️ ɴᴏ ʙᴀɴɴᴇᴅ ᴜsᴇʀ ɪᴅ ʟɪsᴛ ᴀᴠᴀɪʟᴀʙʟᴇ ᴛᴏ ᴅᴇʟᴇᴛᴇ</blockquote></b>", reply_markup=reply_markup)
-
-# +++ Customised by Rohit[telegram username: @metaui] +++
 
 @Bot.on_message(filters.command('banuser_list') & filters.private & is_admin)
 async def get_banuser_list(client:Client, message: Message):        
@@ -471,8 +465,6 @@ async def autoDelete_settings(client, message):
     except Exception as e:
             reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("•  ᴄʟᴏsᴇ  •", callback_data = "close")]])
             await message.reply(f"<b>! ᴇʀʀᴏʀ ᴏᴄᴄᴜʀᴇᴅ..\n<blockquote>ʀᴇᴀsᴏɴ:</b> {e}</blockquote><b><i>ᴄᴏɴᴛᴀᴄᴛ ᴅᴇᴠᴇʟᴏᴘᴇʀ: @urr_sanjiii</i></b>", reply_markup=reply_markup)
-# +++ Customised by Rohit[telegram username: @metaui] +++
-
 
 #Files related settings command
 @Bot.on_message(filters.command('files') & filters.private & ~banUser)
@@ -560,22 +552,22 @@ async def set_shortener(client, message):
         await message.reply_photo(
             photo=START_PIC,
             caption=(
-                f"<b>sʜᴏʀᴛɴᴇʀ sᴇᴛᴛɪɴɢs</b>\n\n"
+                f"<b>𝐒𝐇𝐎𝐑𝐓𝐍𝐄𝐑 𝐒𝐄𝐓𝐓𝐈𝐍𝐆𝐒</b>\n\n"
                 f"» sʜᴏʀᴛɴᴇʀ sᴛᴀᴛᴜs: {shortener_status}\n\n"
                 f"ᴜsᴇ ᴛʜᴇ ᴏᴘᴛɪᴏɴ ʙᴇʟᴏᴡ ᴛᴏ ᴄᴏɴғɪɢᴜʀᴇ ᴛʜᴇ sʜᴏʀᴛɴᴇʀ sᴇᴛᴛɪɴɢs."
             ),
             reply_markup=InlineKeyboardMarkup([
                 [mode_button],
-                [InlineKeyboardButton('sᴇᴛ sʜᴏʀᴛɴᴇʀ sɪᴛᴇ', callback_data='set_shortener_details')],
+                [InlineKeyboardButton('Set Site', callback_data='set_shortener_details')],
                 [
-                    InlineKeyboardButton('sᴇᴛᴛɪɴɢs', callback_data='shortener_settings'),
-                    InlineKeyboardButton('ʀᴇғʀᴇsʜ', callback_data='set_shortener')
+                    InlineKeyboardButton('Settings ⚙️', callback_data='shortener_settings'),
+                    InlineKeyboardButton('🔄 Refresh', callback_data='set_shortener')
                 ],
                 [
-                    InlineKeyboardButton('sᴇᴛ ᴠᴇʀɪғɪᴇᴅ ᴛɪᴍᴇʀ', callback_data='set_verify_time')],
-                    [InlineKeyboardButton('sᴇᴛ ᴛᴜᴛᴏʀɪᴀʟ ᴠɪᴅᴇᴏ', callback_data='set_tut_video')
+                    InlineKeyboardButton('Set Verified Time ⏱', callback_data='set_verify_time'),
+                    InlineKeyboardButton('Set Tutorial Video 🎥', callback_data='set_tut_video')
                 ],
-                [InlineKeyboardButton('•  ᴄʟᴏsᴇ  •', callback_data='close')]
+                [InlineKeyboardButton('Close ✖️', callback_data='close')]
             ])
         )
     except Exception as e:
@@ -590,4 +582,4 @@ async def set_shortener(client, message):
             ),
             reply_markup=reply_markup
         )
-# +++ Customised by Rohit[telegram username: @metaui] +++
+
