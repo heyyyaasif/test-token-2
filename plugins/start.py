@@ -133,10 +133,10 @@ async def start_command(client: Client, message: Message):
 
             return await message.reply_photo(
                 photo=TOKEN_PIC,
-                caption=f"<blockquote><b>›› Hey!!, {message.from_user.mention} ~</b></blockquote>\n\n<i>Your Ads token is expired, refresh your token and try again.</i> \n\n<b>Token Timeout:</b> {get_exp_time(VERIFY_EXPIRE)} \n\n<blockquote expandable><b>What is token?</b> \n<i>This is an ads token. If you pass 1 ad, you can use the bot for {get_exp_time(VERIFY_EXPIRE)} after passing the ad.</i>\n\nOnce done you will <a href='https://t.me/Battousai_Network/31'>get access to all our 6 bots</a> for {get_exp_time(VERIFY_EXPIRE)} which are ⬇️\n\n» @Sukuna_Sama_Bot\n» @Devil_Fruit_Bot\n» @Lord_Aizen_Raven_Bot\n@Hitokiri_Battousai_Bot\n» @pirate_hunter_zoro_raven_bot\n» @Black_Goku_Raven_Bot\n\n<b>APPLE/IPHONE USERS COPY TOKEN LINK AND OPEN IN CHROME BROWSER</b></blockquote>",
+                caption=f"<blockquote><b>›› Hey!!, {message.from_user.mention} ~</b></blockquote>\n\n<i>Your Ads token is expired, refresh your token and try again.</i> \n\n<b>Token Timeout:</b> {get_exp_time(VERIFY_EXPIRE)} \n\n<blockquote expandable><b>What is token?</b> \n<i>This is an ads token. If you pass 1 ad, you can use the bot for {get_exp_time(VERIFY_EXPIRE)} after passing the ad.</i>\n\nOnce done you will <a href='https://t.me/Battousai_Network/31'>get access to all our 6 bots</a> for {get_exp_time(VERIFY_EXPIRE)} which are ⬇️\n\n» @Sukuna_Sama_Bot\n» @Devil_Fruit_Bot\n» @Lord_Aizen_Raven_Bot\n» @Hitokiri_Battousai_Bot\n» @pirate_hunter_zoro_raven_bot\n» @Black_Goku_Raven_Bot\n\n<b>APPLE/IPHONE USERS COPY TOKEN LINK AND OPEN IN CHROME BROWSER</b></blockquote>",
                 reply_markup=InlineKeyboardMarkup([
                     [InlineKeyboardButton("»  ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ᴠᴇʀɪғʏ  «", url=link)],
-                    [InlineKeyboardButton("»  ʜᴏᴡ ᴛᴏ ᴠᴇʀɪʏ/ᴛᴜᴛᴏʀɪᴀʟ ᴠɪᴅᴇᴏ  «", url=TUT_VID)]
+                    [InlineKeyboardButton("» ʜᴏᴡ ᴛᴏ ᴠᴇʀɪғʏ/ᴛᴜᴛᴏʀɪᴀʟ ᴠɪᴅᴇᴏ «", url=TUT_VID)]
                 ])
             )
                             
