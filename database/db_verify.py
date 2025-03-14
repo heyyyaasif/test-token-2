@@ -3,14 +3,14 @@ import time
 import pymongo, os
 import motor
 import motor.motor_asyncio  # Import the correct module
-from config import VERIFY_DB, DB_NAME
+from config import VERIFY_DB, DBV_NAME
 from bot import Bot
 import logging
 from datetime import datetime, timedelta
 from database.database import *
 
 dbclient = motor.motor_asyncio.AsyncIOMotorClient(VERIFY_DB)
-database = dbclient[DB_NAME]
+database = dbclient[DBV_NAME]
 
 # Initialize the collection properly
 vers_data = database['vers']
