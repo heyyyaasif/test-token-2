@@ -37,7 +37,7 @@
 <i>You can add or remove token verfication system by providing the required details like shortner url/api key/token timer/etc through bot, and you can also remove/turn off token verification if needed.</i>
 
 ### 10. LINK BYPASS DETECTION 💀: 
-<i>If a bot user try to bypass the token verification, then the bot will immediately detect it and give a warning to the user and says to verify again. Isn't it Good ? 😂💭</i>
+<i>If a bot user try to bypass the token verification, then the bot will immediately detect it and give a warning to the user and says to verify again. Isn't it Good ?</i>
 
 ### <i>🚀 In addition to the above, more user-friendly and advanced interaction features have been added. It is upgraded version of previous bot features, So more interactive then previous.</i>
 
@@ -45,16 +45,15 @@
 
 ### <h2>⚠️ YOU SHOULD ADD BELOW COMMANDS ON YOUR BOT:</h2>
 ```
-start - Ah, checking if I'm alive? How thoughtful of you.  
-help - Need a little guidance? Let me show you the way. 
+start - Ah, checking if I'm alive? How thoughtful of you.   
 batch - Generating multiple links at once? Efficient and clever.  
 genlink - A link for a single post? How neat.  
 broadcast - A message for everyone? How bold of you.  
-cancel - Ah, stopping a broadcast? Second thoughts, I see. 
+cancel - Ah, stopping a broadcast? Second thoughts, I see.
+help - Need a little guidance? Let me show you the way.
 users - Curious about user commands? Go on, take a look.  
 forcesub - A little rule to ensure everyone stays together.  
 req_fsub - Want to know about the requested force subscription? How diligent. 
-
 files - Ah, organizing messages and files? Such a responsible one.  
 auto_del - Let’s make things vanish, shall we?  
 cmd - A secret list of commands… but only for admins, how exclusive.  
