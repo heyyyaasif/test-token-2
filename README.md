@@ -1,4 +1,4 @@
-### <h1>ADVANCE FILE SHARING BOT V5 🤖</h1>
+### <h1>AN ADVANCE FILE SHARING BOT V5 BY SANJI SAMA 🤖</h1>
 <img src="https://telegra.ph/file/e292b12890b8b4b9dcbd1.jpg">
 <blockquote><b>THIS IS AN ADVANCE FILE SHARING BOT WITH TOKEN VERIFICATION SYSTEM AND LINK BYPASS DETECTION, MADE BY ➪ <a href="https://t.me/Urr_Sanjiii">𝐒ᴀɴJɪ 𝐒ᴀᴍᴀ</a><br> HERE ONLY THE HIGHLIGHTTED FEATURES ARE MENTIONED BELOW ;</b></blockquote>
 
