@@ -54,9 +54,13 @@
 
 ### <h2>⚠️ YOU SHOULD ADD BELOW COMMANDS ON YOUR BOT:</h2>
 ```
-start - Ah, checking if I'm alive? How thoughtful of you.   
+start - Ah, checking if I'm alive? How thoughtful of you. 
+search - Search For An Anime , ! /search anime name 
+top - See Today's Top Animes List
+weekly - See Weekly Top Animes List 
 batch - Generating multiple links at once? Efficient and clever.  
 genlink - A link for a single post? How neat.  
+fcast - Broadcast A Message With Forward Tag and Premium Emojis
 broadcast - A message for everyone? How bold of you.  
 cancel - Ah, stopping a broadcast? Second thoughts, I see.
 help - Need a little guidance? Let me show you the way.
@@ -77,7 +81,7 @@ del_banuser - Undoing a ban? Feeling kind today?
 banuser_list - A little list of those cast aside. How sad.  
 status - Checking my uptime and users? How very observant.  
 token - Verifying tokens? Always so careful, aren't you?
-restart - Restarting me? Do be gentle.  
+restart - Restarting me? Do be gentle.   
 ```
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
