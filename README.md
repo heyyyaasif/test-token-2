@@ -76,7 +76,7 @@ restart - Restarting me? Do be gentle.
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
 <h2>🧑‍💻 DEVELOPER : 
-  <a href="https://t.me/Urr_Sanjiii">𝐒ᴀɴJɪ 𝐒αᴍᴀ</a></h2>
+  <a href="https://t.me/Urr_Sanjiii">𝐒ᴀɴJɪ 𝐒αᴍᴀ</a>, <a href="https://t.me/metaui">📚 𝐇 𝐀 𝐌 𝐙 𝐀</a></h2>
 
 
 
