@@ -3,7 +3,8 @@
 <blockquote><b>THIS IS AN ADVANCE FILE SHARING BOT WITH TOKEN VERIFICATION SYSTEM AND LINK BYPASS DETECTION, MADE BY ➪ <a href="https://t.me/Urr_Sanjiii">𝐒ᴀɴJɪ 𝐒ᴀᴍᴀ</a><br> HERE ONLY THE HIGHLIGHTTED FEATURES ARE MENTIONED BELOW ;</b></blockquote>
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
-
+<details>
+<summary><b><blockquote> 🌟 BOT FEATURES 1.1:</blockquote></b></summary>
 ### <h2> 🌟 BOT FEATURES 1.1: </h2>
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif"><br>
 ### 1. FORCE-SUB 📢: 
@@ -40,6 +41,8 @@
 <i>If a bot user try to bypass the token verification, then the bot will immediately detect it and give a warning to the user and says to verify again. Isn't it Good ?</i>
 
 ### <i>🚀 In addition to the above, more user-friendly and advanced interaction features have been added. It is upgraded version of previous bot features, So more interactive then previous.</i>
+
+</details>
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
