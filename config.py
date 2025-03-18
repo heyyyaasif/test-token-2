@@ -24,7 +24,7 @@ OWNER_ID = int(os.environ.get("OWNER_ID", "7827448605"))
 SUPPORT_GROUP = os.environ.get("SUPPORT_GROUP", "-1002389519910")
 
 #Port
-PORT = os.environ.get("PORT", "8060")
+PORT = os.environ.get("PORT", "8078")
 
 #Database --⚠️ REQUIRED--
 DB_URL = os.environ.get("DB_URL", "mongodb+srv://Cobra:cobra813@cluster0.0lso95o.mongodb.net/?retryWrites=true&w=majority&appName=HancockADVTokenBot")
